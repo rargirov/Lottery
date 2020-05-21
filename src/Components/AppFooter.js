@@ -7,7 +7,7 @@ class AppFooter extends Component {
     render() {
         return (
             <Footer style={{ textAlign: 'center' }}>
-                Lottery React ©App ©{new Date().getFullYear()} Created with Ant UED
+                Lottery React App {new Date().getFullYear()} Created by Ant UED
             </Footer>
         );
     }

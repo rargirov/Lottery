@@ -17,6 +17,7 @@ class Lottery extends Component {
 
   renderTickets = () => {
     const { tickets, actions } = this.props;
+    
     return tickets.map((ticket, index) => {
       return (
         <LotteryTicket

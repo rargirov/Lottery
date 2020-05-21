@@ -9,9 +9,7 @@ class LotteryTicket extends Component {
     const { actions, index, color, number } = this.props;
 
     return (
-      <Card style={{ backgroundColor: color, marginBottom: 25 }}
-        size='small'
-        title='Ticket'>
+      <Card style={{ backgroundColor: color, marginBottom: 25 }} size='small'title='Ticket'>
         <Title level={3}>Ticket number: {number}</Title>
         <Button block onClick={() => { actions.removeTicket(index) }}>X</Button>
       </Card>

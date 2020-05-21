@@ -5,6 +5,7 @@ import { Button, Card } from 'antd';
 class Final extends Component {
   renderResult() {
     const { tickets, winningNumber } = this.props;
+    
     return (tickets.some((ticket) => ticket.number === winningNumber))
       ? this.renderWinning()
       : this.renderTryAgain();
@@ -26,9 +27,7 @@ class Final extends Component {
     const { actions, winningNumber } = this.props;
 
     return (
-      <Card style={{ backgroundColor: getRandomColor() }}
-        title={this.renderResult()}
-      >
+      <Card style={{ backgroundColor: getRandomColor() }} title={this.renderResult()} >
         <h2>The winning number is: <b>{winningNumber}</b></h2>
         <Button block onClick={() => { actions.reset() }} >New game?</Button>
       </Card>

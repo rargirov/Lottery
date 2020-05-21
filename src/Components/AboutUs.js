@@ -3,9 +3,9 @@ import React, { Component } from 'react';
 class AboutUs extends Component {
     render() {
         return (
-            <div style={{ textAlign: 'center' }}>
+            <p>
                Learing React.js
-            </div>
+            </p>
         );
     }
 }

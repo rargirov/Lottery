@@ -25,7 +25,7 @@ const removeTicket = function (index) {
     });
 }
 
-const finish = function (index) {
+const finish = function () {
     this.setState({ finished: true });
 }
 

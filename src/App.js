@@ -13,7 +13,7 @@ import { getRandomNumber } from './Helpers/utils';
 import { registerTicket, removeTicket, finish, reset } from './Helpers/actions';
 
 import 'antd/dist/antd.css';
-
+import './App.css';
 const { Content } = Layout;
 
 class App extends Component {
@@ -68,7 +68,7 @@ class App extends Component {
               <Switch>
                 <Route path='/' exact component={() => this.renderApp()} />
                 <Route path='/about' component={AboutUs} />
-                <Redirect from='*' to='/'/>
+                <Redirect from='*' to='/' />
               </Switch>
             </div>
           </Content>

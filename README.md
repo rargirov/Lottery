@@ -1,2 +1,2 @@
 # Lottery
-Simple demo app that use React.js
+Simple demo app that uses React.js
