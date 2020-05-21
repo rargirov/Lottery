@@ -1,11 +1,20 @@
 import React, { Component } from 'react';
-import Lottery from './Components/Lottery';
+import { BrowserRouter, Route, Switch, Redirect } from 'react-router-dom';
+import { Layout } from 'antd';
+
+import AboutUs from './Components/AboutUs';
+import AppHeader from './Components/AppHeader';
+import AppFooter from './Components/AppFooter';
+
 import Final from './Components/Final';
+import Lottery from './Components/Lottery';
 
 import { getRandomNumber } from './Helpers/utils';
 import { registerTicket, removeTicket, finish, reset } from './Helpers/actions';
-import './App.css';
+
 import 'antd/dist/antd.css';
+
+const { Content } = Layout;
 
 class App extends Component {
   constructor(props) {
@@ -51,9 +60,21 @@ class App extends Component {
 
   render() {
     return (
-      <div className='App'>
-        {this.renderApp()}
-      </div>
+      <BrowserRouter>
+        <Layout className='layout'>
+          <AppHeader />
+          <Content style={{ padding: '0 50px', textAlign: 'center' }}>
+            <div className="site-layout-content">
+              <Switch>
+                <Route path='/' exact component={() => this.renderApp()} />
+                <Route path='/about' component={AboutUs} />
+                <Redirect from='*' to='/'/>
+              </Switch>
+            </div>
+          </Content>
+          <AppFooter />
+        </Layout>
+      </BrowserRouter>
     )
   }
 }
