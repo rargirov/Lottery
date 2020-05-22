@@ -6,7 +6,7 @@ const { Title } = Typography;
 
 class Lottery extends Component {
 
-  renderButton = (text, action) => <Button type="primary" block onClick={action}>{text}</Button>
+  renderButton = (text, action) => <Button type="primary" block onClick={action}>{text}</Button>;
 
   renderActionButton = () => {
     const { remainingTickets, actions } = this.props;
@@ -17,7 +17,7 @@ class Lottery extends Component {
 
   renderTickets = () => {
     const { tickets, actions } = this.props;
-    
+
     return tickets.map((ticket, index) => {
       return (
         <LotteryTicket
@@ -32,13 +32,14 @@ class Lottery extends Component {
   }
 
   render() {
+    const { tickets, remainingTickets } = this.props;
     return (
       <>
         <Title>Lottery</Title>
         {this.renderActionButton()}
-        <small>remaining tickets: {this.props.remainingTickets}</small>
-        <Divider>Your tickets</Divider>
-        {this.renderTickets()}
+        <small>Remaining tickets: {remainingTickets}</small>
+        {tickets.length > 0 &&
+          (<Divider>Your tickets</Divider> && this.renderTickets())}
       </>
     );
   }

@@ -1,11 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+
+import LotteryApp from './Components/LotteryApp';
+import Counter from './FunctionComponents/Counter';
+import RandomNumber from './FunctionComponents/RandomNumber';
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
-    <App />,
+    <LotteryApp />,
+    // <Counter />,
+    // <RandomNumber />,
   document.getElementById('root')
 );
 

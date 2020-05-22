@@ -2,21 +2,21 @@ import React, { Component } from 'react';
 import { BrowserRouter, Route, Switch, Redirect } from 'react-router-dom';
 import { Layout } from 'antd';
 
-import AboutUs from './Components/AboutUs';
-import AppHeader from './Components/AppHeader';
-import AppFooter from './Components/AppFooter';
+import AboutUs from './AboutUs';
+import AppHeader from './AppHeader';
+import AppFooter from './AppFooter';
 
-import Final from './Components/Final';
-import Lottery from './Components/Lottery';
+import Final from './Final';
+import Lottery from './Lottery';
 
-import { getRandomNumber } from './Helpers/utils';
-import { registerTicket, removeTicket, finish, reset } from './Helpers/actions';
+import { getRandomNumber } from '../Helpers/utils';
+import { registerTicket, removeTicket, finish, reset } from '../Helpers/actions';
 
 import 'antd/dist/antd.css';
-import './App.css';
+import '../App.css';
 const { Content } = Layout;
 
-class App extends Component {
+class LotteryApp extends Component {
   constructor(props) {
     super(props);
 
@@ -79,4 +79,4 @@ class App extends Component {
   }
 }
 
-export default App
+export default LotteryApp
